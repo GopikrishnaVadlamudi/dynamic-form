@@ -9,7 +9,7 @@
       <!-- <label>{{item.get('name').value}}</label> -->
       <input formControlName="name" placeholder="Item name" />
       <input type="button" value="subAdd" (click)="addSubItems(item)" />
-
+      <input type="button" value="remove" (click)="removeItems(idx)" />
       <div
         formArrayName="subItems"
         *ngFor="let subItem of item.controls.subItems.controls; let subIdx = index;"
@@ -41,7 +41,7 @@
           <input
             type="button"
             value="remove"
-            (click)="removeSubItems(subIdx)"
+            (click)="removeSubItems(idx,subIdx)"
           />
           <mat-divider></mat-divider>
         </div>
