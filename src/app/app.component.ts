@@ -105,6 +105,13 @@ export class AppComponent {
     items.push(this.createItem(newItem));
   }
 
+  removeSubItems(index){
+    console.log(index)
+    let subItems = this.orderForm.get("subItems") as FormArray
+    // this.orderForm.controls.controllerArray["controls"].splice(index,1)
+    subItems.removeAt(index);
+  }
+
   // createNewItem(item): FormGroup {
   //   console.log(2)
   //   return this.formBuilder.group({

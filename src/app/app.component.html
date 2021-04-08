@@ -38,7 +38,11 @@
             </mat-select>
           </mat-form-field>
           <!-- <input formControlName="description" placeholder="Item description" /> -->
-          <input type="button" value="remove" (click)="removeSubItems(subItem)" />
+          <input
+            type="button"
+            value="remove"
+            (click)="removeSubItems(subIdx)"
+          />
           <mat-divider></mat-divider>
         </div>
       </div>
